@@ -77,7 +77,6 @@ class TeenagerTest < MiniTest::Unit::TestCase
   end
 
   def test_silence
-    skip
     assert_equal 'Fine. Be that way!', teenager.hey('')
   end
 

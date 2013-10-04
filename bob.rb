@@ -6,6 +6,8 @@ class Bob
         'Woah, chill out!'
       when is_a_question?(value)
         'Sure.'
+      when is_silence?(value)
+         'Fine. Be that way!'
       else
         'Whatever.'
     end
@@ -21,6 +23,11 @@ class Bob
   private
   def is_a_question?(value)
     value.respond_to?(:match) && value.match(/\?$/)
+  end
+
+  private
+  def is_silence?(value)
+    value.empty?
   end
 
   private
