@@ -73,7 +73,6 @@ class TeenagerTest < MiniTest::Unit::TestCase
   end
 
   def test_question_with_only_numbers
-    skip
     assert_equal 'Sure.', teenager.hey('4?')
   end
 
