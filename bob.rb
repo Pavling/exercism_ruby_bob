@@ -27,7 +27,7 @@ class Bob
 
   private
   def is_silence?(value)
-    value.empty?
+    value.respond_to?(:gsub) && value.gsub(/\s/, '').empty?
   end
 
   private
