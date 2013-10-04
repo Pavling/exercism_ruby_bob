@@ -68,6 +68,16 @@ class TeenagerTest < MiniTest::Unit::TestCase
     assert_equal 'Sure.', teenager.hey("Wait! Hang on. Are you going to be OK?")
   end
 
+  def test_only_numbers
+    skip
+    assert_equal 'Whatever.', teenager.hey('1, 2, 3')
+  end
+
+  def test_question_with_only_numbers
+    skip
+    assert_equal 'Whatever.', teenager.hey('4?')
+  end
+
   def test_silence
     skip
     assert_equal 'Fine. Be that way!', teenager.hey('')
