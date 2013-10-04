@@ -22,7 +22,7 @@ class Bob
 
   private
   def is_a_question?(value)
-    value.respond_to?(:match) && value.match(/\?$/)
+    value.respond_to?(:match) && value.match(/\?\Z/)
   end
 
   private
